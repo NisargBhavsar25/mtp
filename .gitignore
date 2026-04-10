@@ -1,0 +1,79 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# Virtual environments
+env/
+venv/
+.venv/
+ENV/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Large files & directories (not suitable for GitHub) ──
+
+# External mat2vec library (~1.2 GB) — install separately via pip
+mat2vec/
+
+# Archive of legacy files (~889 MB)
+archive/
+
+# Pretrained mat2vec embedding models (~89 MB)
+data/mat2vec_models/
+
+# Large processed datasets — regenerate via pipeline
+data/processed/MP_Li_Materials.csv
+data/processed/MP_Li_Materials_Enhanced.csv
+data/processed/MP_predictions.csv
+data/results/MP_predictions.csv
+
+# Large embeddings — regenerate via pipeline
+data/embeddings/*.npy
+
+# Large model artifacts
+models/mat2vec_info.joblib
+models/model_14feat/
+
+# Report PDFs & LaTeX build artifacts
+Report/*.pdf
+Report/*.zip
+Report/MTP_1/*.aux
+Report/MTP_1/*.log
+Report/MTP_1/*.out
+Report/MTP_1/*.toc
+Report/MTP_1/*.bbl
+Report/MTP_1/*.blg
+Report/MTP_1/*.synctex.gz
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
