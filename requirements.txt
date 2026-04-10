@@ -1,0 +1,13 @@
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+scipy
+joblib
+pymatgen
+gensim
+xgboost
+lightgbm
+mp-api
+selenium
