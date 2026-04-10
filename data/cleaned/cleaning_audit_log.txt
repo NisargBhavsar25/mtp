@@ -1,0 +1,54 @@
+======================================================================
+MTP DATA CLEANING AUDIT LOG
+======================================================================
+
+======================================================================
+CLEANING: DDSE Compositional
+======================================================================
+  Loaded: 2917 rows
+  Step 1 - Exact duplicates removed: 46
+  Step 2 - Conflicting groups merged: 20 (removed 33 excess rows)
+  Step 3 - Validation-set overlaps removed: 323 rows (94 unique formulas)
+  Final: 2515 rows
+  Saved: ddse_compositional_clean.csv
+  Saved: ddse_leakage_removed.csv (for reference)
+
+======================================================================
+CLEANING: LiIon Database
+======================================================================
+  Loaded: 443 rows
+  Conflicting groups merged: 15 (removed 18 excess rows)
+  Final: 425 rows
+  Saved: LiIonDatabase_clean.csv
+
+======================================================================
+CLEANING: LLZO Dataset
+======================================================================
+  Loaded: 175 rows, 10 columns
+  Dropped 3 junk columns: ['Unnamed: 7', 'Unnamed: 8', 'Unnamed: 9']
+  Conflicting groups merged: 22 (removed 58 excess rows)
+  Final: 117 rows
+  Saved: LLZO_clean.csv
+
+======================================================================
+CLEANING: Sendek Dataset
+======================================================================
+  Loaded: 39 rows
+  Dropped 3 junk columns: ['Unnamed: 7', 'Unnamed: 8', 'Unnamed: 9']
+  No duplicates found. Dataset is clean.
+  Final: 39 rows
+  Saved: Sendek_clean.csv
+
+======================================================================
+FINAL SUMMARY
+======================================================================
+  DDSE:   2917 -> 2515 rows
+  LiIon:  443  -> 425 rows
+  LLZO:   175  -> 117 rows
+  Sendek: 39   -> 39 rows
+
+  Cross-dataset formula overlap remaining: 0
+  Validation sets are now fully independent from training data.
+
+  All cleaned files saved to: E:\MTP\data\cleaned
+  Audit log saved to: E:\MTP\data\cleaned\cleaning_audit_log.txt
