@@ -1,0 +1,16 @@
+Feature,Mean_|SHAP|
+Temperature,0.85
+Mat2Vec_Aggregate_Sum,0.6
+Average_ionic_radius,0.45
+Heaviest_element_mass,0.42
+Total_atoms_per_formula_unit,0.35
+Li_fraction,0.3
+Electronegativity_variance,0.25
+Average_electronegativity,0.2
+Packing_efficiency_proxy,0.18
+Li_to_anion_ratio,0.15
+Average_atomic_mass,0.08
+Composition_entropy,0.07
+Number_of_elements,0.05
+Group_diversity,0.04
+Lightest_element_mass,0.03

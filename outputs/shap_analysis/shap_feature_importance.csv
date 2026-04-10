@@ -1,0 +1,9 @@
+Feature,Mean_|SHAP|
+Mat2Vec_Embedding,0.9390126
+inv_Temp_K,0.13996458
+composition_entropy,0.039947867
+heaviest_element_mass,0.03758602
+avg_ionic_radius,0.022252448
+electronegativity_variance,0.014513919
+packing_efficiency_proxy,0.014198649
+li_fraction,0.005567942

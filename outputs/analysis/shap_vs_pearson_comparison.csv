@@ -1,0 +1,15 @@
+Feature,Mean_|SHAP|,|Pearson_r|,SHAP/|r|_Ratio
+Temperature,0.85,0.42,2.02
+Average_ionic_radius,0.45,0.36,1.25
+Heaviest_element_mass,0.42,0.36,1.17
+Total_atoms_per_formula_unit,0.35,0.32,1.09
+Li_fraction,0.3,0.29,1.03
+Electronegativity_variance,0.25,0.29,0.86
+Packing_efficiency_proxy,0.18,0.23,0.78
+Average_electronegativity,0.2,0.26,0.77
+Li_to_anion_ratio,0.15,0.21,0.71
+Average_atomic_mass,0.08,0.15,0.53
+Composition_entropy,0.07,0.15,0.47
+Number_of_elements,0.05,0.15,0.33
+Group_diversity,0.04,0.15,0.27
+Lightest_element_mass,0.03,0.15,0.2

@@ -1,0 +1,5 @@
+Dataset,R²,MAE,RMSE,MAPE (%)
+The Liverpool Ionics Dataset,0.8633,0.7819,0.8344,17.04
+LLZO-focused Dataset,0.8438,0.2374,0.2998,6.48
+Sendek Dataset,0.9219,0.6654,0.7153,13.10
+Overall,0.8801,0.6297,0.7235,13.99
