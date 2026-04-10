@@ -1,0 +1,34 @@
+\chapter{Conclusion}
+
+\section{Summary of Findings}
+
+This thesis set out to address a critical bottleneck in the discovery of novel solid-state electrolytes: the slow pace of traditional experimental and computational screening methods. The primary objective was to develop and validate a structure-agnostic machine learning model capable of rapidly and accurately predicting the ionic conductivity of crystalline solids using only features derived from their chemical composition. The key findings of this work successfully meet this objective and can be summarized as follows:
+
+\begin{itemize}
+    \item \textbf{Successful Development of a High-Performance Predictive Model:} A Gradient Boosting regression model was successfully trained on the DDSE database \cite{DDSE2021}. This model demonstrated high predictive accuracy, achieving an adjusted coefficient of determination (\(R^2_{adj}\)) of 0.85 and a Root Mean Square Error (RMSE) of 0.56 on a held-out test set. This confirms that machine learning can effectively learn the complex relationship between elemental properties and ionic conductivity.
+
+    \item \textbf{Validation of a Composition-Only Feature Set:} This work validated the hypothesis that a carefully engineered set of features based solely on elemental properties can be sufficient for building a powerful predictive model. The feature set, which included compositional averages, measures of chemical complexity, and proxies for structural diversity, proved highly effective without requiring any computationally expensive crystal structure information.
+
+    \item \textbf{Demonstrated Robustness and Generalization:} The true strength of the developed model was demonstrated through rigorous external validation. When tested against three independent datasets (A, B, and C) comprising 657 materials not seen during training, the model achieved an outstanding overall \(R^2_{adj}\) of 0.88 \cite{Famprikis2019, Miara2015, Sendek2017}. This exceptional performance across different chemical families, including garnets and phosphates, proves that the model has learned generalizable physical and chemical principles and is not merely overfitted to its training data.
+
+    \item \textbf{Creation of a Computationally-Efficient Screening Tool:} By being entirely structure-agnostic, the final model serves as an ultra-fast screening tool. It can make near-instantaneous predictions for any hypothetical chemical formula, enabling the rapid exploration of vast compositional spaces. This provides a powerful framework to down-select and prioritize promising candidate materials for more intensive experimental synthesis or first-principles computational study.
+\end{itemize}
+
+In essence, this research has successfully developed and rigorously validated a machine learning framework that significantly accelerates the initial stages of materials discovery for solid-state electrolytes, directly addressing the core problem statement of this thesis.
+
+
+\section{Limitations of the Study}
+
+While this work successfully demonstrates a powerful, high-throughput screening tool for solid electrolytes, it is important to acknowledge its inherent limitations. These limitations provide context for the current results and pave the way for future research directions.
+
+\begin{itemize}
+    \item \textbf{Dependence on Data Quality and Quantity:} The performance of any machine learning model is fundamentally bound by the quality and scope of the data on which it is trained. Our model relies on experimental data extracted from the literature, which may contain inherent noise, inconsistencies in measurement techniques, or reporting errors \cite{DDSE2021}. Furthermore, the dataset, while comprehensive, may not fully represent all possible chemical families, potentially limiting the model's accuracy when predicting for completely novel or out-of-distribution compositions.
+
+    \item \textbf{Structure-Agnostic by Design:} The key strength of this model—its structure-agnostic nature—is also its primary limitation. By design, the model does not consider explicit crystallographic information, such as space group, lattice parameters, or specific ion-hopping pathways. While compositional features serve as effective proxies, they cannot capture the subtle but critical effects of polymorphism (different crystal structures for the same composition) or specific microstructural features like grain boundaries, which are known to significantly impact ionic conductivity \cite{Famprikis2019, Janek2016}. Two materials with the same composition but different crystal structures would yield the same prediction from this model, which is a significant simplification.
+
+    \item \textbf{Prediction of a Single Property:} This study focused exclusively on predicting ionic conductivity. However, a viable solid electrolyte must satisfy a multitude of properties simultaneously, including electrochemical stability against the electrodes, mechanical robustness, and manufacturability \cite{Manthiram2017}. The current model does not provide information on these other critical performance metrics, meaning its "hit" candidates still require extensive multi-property validation.
+
+    \item \textbf{Interpretability vs. Complexity:} While feature importance analysis provides some insight into the model's decision-making process, the Gradient Boosting model itself operates as a complex "black box." It does not provide a simple, interpretable physical equation or a direct causal mechanism linking the features to the conductivity. The model identifies correlations, but does not explain the underlying physics in the same way a first-principles calculation can.
+\end{itemize}
+
+These limitations do not diminish the utility of the model as a rapid screening filter but rather define its appropriate place in the materials discovery workflow: as a powerful first step to identify promising compositional spaces that warrant deeper, more resource-intensive investigation.

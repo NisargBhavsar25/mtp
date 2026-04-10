@@ -1,0 +1,55 @@
+\documentclass[12pt]{report} 
+
+%load any additional packages
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{multicol}
+\usepackage{amsmath}
+
+\setlength{\topmargin}{0.0in}
+\setlength{\oddsidemargin}{0.33in}
+\setlength{\evensidemargin}{-0.08in}
+\setlength{\textheight}{8.5in}
+\setlength{\textwidth}{6.0in}
+
+\def\mytitle{Machine Learning-Driven Prediction of Ionic Conductivity in Crystalline Solids for Advanced Battery Applications}
+\def\myname{Bhavsar Nisarg Nirmalkumar}
+\def\mydegree{Master of Technology}
+\def\mysupervisor{Prof. Somenath Ganguly}
+\def\myrollno{21CH30009}
+\def\mydep{Chemical Engineering}
+\def\mydegreedate{12/11/2025}
+
+\begin{document}
+ \baselineskip=18pt plus1pt
+ \setcounter{secnumdepth}{3}
+ \setcounter{tocdepth}{3}
+ \pagenumbering{roman}
+ 
+ %Front Matter
+ \include{./FrontMatter/titlePage}
+ \include{./FrontMatter/certificate}
+ %\include{./FrontMatter/dedication}
+ \include{./FrontMatter/acknowledgements}
+ \include{./FrontMatter/abstract}
+ \tableofcontents
+ \listoffigures
+ 
+ %Main material
+ \clearpage
+ \pagenumbering{arabic}
+ 
+ \include{./Chapters/background}
+ \include{./Chapters/literature}
+ \include{./Chapters/methodology}
+ \include{./Chapters/results}
+ \include{./Chapters/conclusion}
+ \include{./Chapters/future}
+ 
+ %Bibliography
+ \addcontentsline{toc}{chapter}{Bibliography}
+ \bibliographystyle{agsm}
+ \bibliography{references}
+ 
+\end{document}
