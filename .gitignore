@@ -77,3 +77,6 @@ Report/MTP_1/*.synctex.gz
 
 # Jupyter notebook checkpoints
 .ipynb_checkpoints/
+
+# Recursive clone of this repo (from running notebooks locally)
+mtp/
